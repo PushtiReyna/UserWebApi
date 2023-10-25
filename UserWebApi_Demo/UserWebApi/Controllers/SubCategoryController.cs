@@ -74,9 +74,5 @@ namespace UserWebApi.Controllers
             catch { throw; }
             return response;
         }
-
-
-
-
     }
 }

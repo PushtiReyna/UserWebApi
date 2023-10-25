@@ -13,6 +13,9 @@ namespace UserWebApi
 
             services.AddScoped<ISubCategory, SubCategoryImpl>();
             services.AddScoped<SubCategoryBLL>();
+
+            services.AddScoped<IUser, UserImpl>();
+            services.AddScoped<UserBLL>();
             
         }
     }

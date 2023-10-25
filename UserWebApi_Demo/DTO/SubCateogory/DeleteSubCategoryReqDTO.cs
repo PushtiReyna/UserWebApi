@@ -10,8 +10,8 @@ namespace DTO.SubCateogory
     {
         public int SubcategoryId { get; set; }
 
-        public int? CategoryId { get; set; }
+        //public int? CategoryId { get; set; }
 
-        public string Subcategoryname { get; set; } = null!;
+        //public string Subcategoryname { get; set; } = null!;
     }
 }

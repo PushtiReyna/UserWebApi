@@ -12,17 +12,31 @@ CategoryId int not null,
 SubcategoryId int not null,
 IsActive bit not null,
 IsDelete bit not null,
-Createddate datetime null,
-Updateddate datetime null
+CreatedBy bit not null,
+CreatedOn datetime null,
+UpdateBy bit not null,
+UpdatedOn datetime null
 )
 
-Create Table CategoryMst(
+ Create Table CategoryMst(
 CategoryId int identity(1,1) Primary key,
-Categoryname varchar(50) not null
+Categoryname varchar(50) not null,
+IsActive bit not null,
+IsDelete bit not null,
+CreatedBy bit not null,
+CreatedOn datetime null,
+UpdateBy bit not null,
+UpdatedOn datetime null
 )
 
 create table SubcategoryMst(
 SubcategoryId int identity(1,1) Primary key,
 CategoryId int,
-Subcategoryname varchar(50) not null
+Subcategoryname varchar(50) not null,
+IsActive bit not null,
+IsDelete bit not null,
+CreatedBy bit not null,
+CreatedOn datetime null,
+UpdateBy bit not null,
+UpdatedOn datetime null
 )

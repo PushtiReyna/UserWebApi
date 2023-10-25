@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataLayer.Entities;
 
@@ -12,6 +11,15 @@ public partial class SubcategoryMst
 
     public string Subcategoryname { get; set; } = null!;
 
-    [NotMapped]
-    public string Categoryname { get; set; }
+    public bool IsActive { get; set; }
+
+    public bool IsDelete { get; set; }
+
+    public bool CreatedBy { get; set; }
+
+    public DateTime? CreatedOn { get; set; }
+
+    public bool UpdateBy { get; set; }
+
+    public DateTime? UpdatedOn { get; set; }
 }

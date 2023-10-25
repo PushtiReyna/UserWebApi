@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer.Entities;
 
@@ -26,36 +29,40 @@ public partial class UserApidbContext : DbContext
     {
         modelBuilder.Entity<CategoryMst>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A0B35D53E45");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A0BD9879E84");
 
             entity.ToTable("CategoryMst");
 
             entity.Property(e => e.Categoryname)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<SubcategoryMst>(entity =>
         {
-            entity.HasKey(e => e.SubcategoryId).HasName("PK__Subcateg__9C4E705DD2FFF99E");
+            entity.HasKey(e => e.SubcategoryId).HasName("PK__Subcateg__9C4E705DFDDFEC48");
 
             entity.ToTable("SubcategoryMst");
 
+            entity.Property(e => e.CreatedOn).HasColumnType("datetime");
             entity.Property(e => e.Subcategoryname)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<UserMst>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__UserMst__3214EC072A72AD15");
+            entity.HasKey(e => e.Id).HasName("PK__UserMst__3214EC07BAACA8E4");
 
             entity.ToTable("UserMst");
 
             entity.Property(e => e.Address)
                 .HasMaxLength(200)
                 .IsUnicode(false);
-            entity.Property(e => e.Createddate).HasColumnType("datetime");
+            entity.Property(e => e.CreatedOn).HasColumnType("datetime");
             entity.Property(e => e.Dob)
                 .HasColumnType("datetime")
                 .HasColumnName("DOB");
@@ -64,7 +71,7 @@ public partial class UserApidbContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.Mobilenumber).HasMaxLength(30);
             entity.Property(e => e.Percentage).HasColumnType("decimal(18, 2)");
-            entity.Property(e => e.Updateddate).HasColumnType("datetime");
+            entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
         });
 
         OnModelCreatingPartial(modelBuilder);

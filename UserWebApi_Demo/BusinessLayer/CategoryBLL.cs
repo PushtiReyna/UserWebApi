@@ -24,15 +24,20 @@ namespace BusinessLayer
             try
             {
                 List<GetCategoryResDTO> lstGetCategoryResDTO = new List<GetCategoryResDTO>();
+                List<CategoryMst> lstcategoryMsts = new List<CategoryMst>();
                 GetCategoryResDTO getCategoryResDTO = new GetCategoryResDTO();
 
-                foreach (CategoryMst category in _db.CategoryMsts.ToList())
+               //var ab = _db.CategoryMsts.Where(u => u.IsDelete ==false).ToList();
+                foreach (CategoryMst category in _db.CategoryMsts.Where(u => u.IsDelete == false).ToList())
                 {
                     getCategoryResDTO = new GetCategoryResDTO();
                     getCategoryResDTO.CategoryId = category.CategoryId;
                     getCategoryResDTO.Categoryname = category.Categoryname;
                     lstGetCategoryResDTO.Add(getCategoryResDTO);
+                    // lstcategoryMsts.Add(category);
+                    //lstGetCategoryResDTO.Add(lstcategoryMsts);
                 }
+                //lstGetCategoryResDTO.Add(ab);
 
                 if (lstGetCategoryResDTO.Count > 0)
                 {
@@ -61,6 +66,10 @@ namespace BusinessLayer
 
                 CategoryMst categoryMst = new CategoryMst();
                 categoryMst.Categoryname = addCategoryReqDTO.Categoryname.Trim();
+                categoryMst.CreatedBy = true;
+                categoryMst.IsActive = true;
+                categoryMst.CreatedOn = DateTime.Now;
+
                 if (categoryMst.Categoryname.Length > 0)
                 {
                     if (_db.CategoryMsts.Where(u => u.Categoryname.Trim() == categoryMst.Categoryname && u.CategoryId != categoryMst.CategoryId).Any())
@@ -111,6 +120,8 @@ namespace BusinessLayer
                 if (categoryMst != null)
                 {
                     categoryMst.Categoryname = updateCategoryReqDTO.Categoryname.Trim();
+                    categoryMst.UpdateBy = true;
+                    categoryMst.UpdatedOn = DateTime.Now;
 
                     if (categoryMst.Categoryname.Length > 0)
                     {
@@ -161,7 +172,9 @@ namespace BusinessLayer
                 if (categoryMst != null)
                 {
                     categoryMst.CategoryId = deleteCategoryReqDTO.CategoryId;
-                    _db.CategoryMsts.Remove(categoryMst);
+                    categoryMst.IsActive = false;
+                    categoryMst.IsDelete = true;
+                   // _db.CategoryMsts.Remove(categoryMst);
                     _db.SaveChanges();
 
                     deleteCategoryResDTO.CategoryId = categoryMst.CategoryId;

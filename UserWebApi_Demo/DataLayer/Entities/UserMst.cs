@@ -25,7 +25,11 @@ public partial class UserMst
 
     public bool IsDelete { get; set; }
 
-    public DateTime? Createddate { get; set; }
+    public bool CreatedBy { get; set; }
 
-    public DateTime? Updateddate { get; set; }
+    public DateTime? CreatedOn { get; set; }
+
+    public bool UpdateBy { get; set; }
+
+    public DateTime? UpdatedOn { get; set; }
 }

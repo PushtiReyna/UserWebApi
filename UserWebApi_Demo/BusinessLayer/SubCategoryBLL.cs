@@ -26,7 +26,7 @@ namespace BusinessLayer
                 List<GetSubCategoryResDTO> lstGetSubCategoryResDTO = new List<GetSubCategoryResDTO>();
                 GetSubCategoryResDTO getSubCategoryResDTO = new GetSubCategoryResDTO();
 
-                foreach (SubcategoryMst subcategoryMst in _db.SubcategoryMsts.ToList())
+                foreach (SubcategoryMst subcategoryMst in _db.SubcategoryMsts.Where(u => u.IsDelete == false).ToList())
                 {
                     getSubCategoryResDTO = new GetSubCategoryResDTO();
                     var categoryName = _db.CategoryMsts.FirstOrDefault(x => x.CategoryId == subcategoryMst.CategoryId);
@@ -64,12 +64,15 @@ namespace BusinessLayer
                 AddSubCategoryResDTO addSubCategoryResDTO = new AddSubCategoryResDTO();
                 SubcategoryMst subcategoryMst = new SubcategoryMst();
 
-                var categoryId = _db.CategoryMsts.FirstOrDefault(x => x.CategoryId == addSubCategoryReqDTO.CategoryId);
+                var categoryId = _db.CategoryMsts.FirstOrDefault(x => x.CategoryId == addSubCategoryReqDTO.CategoryId && x.IsDelete == false);
 
                 if (categoryId != null)
                 {
                     subcategoryMst.CategoryId = addSubCategoryReqDTO.CategoryId;
                     subcategoryMst.Subcategoryname = addSubCategoryReqDTO.Subcategoryname.Trim();
+                    subcategoryMst.IsActive = true;
+                    subcategoryMst.CreatedBy = true;
+                    subcategoryMst.CreatedOn = DateTime.Now;
 
                     if (subcategoryMst.Subcategoryname.Length > 0)
                     {
@@ -92,11 +95,11 @@ namespace BusinessLayer
                                 response.Message = "subcategory is add";
                                 response.StatusCode = System.Net.HttpStatusCode.OK;
                             }
-                            else
-                            {
-                                response.Message = "subcategory is not add.";
-                                response.StatusCode = System.Net.HttpStatusCode.NotFound;
-                            }
+                            //else
+                            //{
+                            //    response.Message = "subcategory is not add.";
+                            //    response.StatusCode = System.Net.HttpStatusCode.NotFound;
+                            //}
                         }
                     }
                     else
@@ -104,6 +107,11 @@ namespace BusinessLayer
                         response.Message = "subcategory name can not be null.";
                         response.StatusCode = System.Net.HttpStatusCode.NotFound;
                     }
+                }
+                else
+                {
+                    response.Message = "category is not valid";
+                    response.StatusCode = System.Net.HttpStatusCode.NotFound;
                 }
 
             }
@@ -120,13 +128,15 @@ namespace BusinessLayer
                 UpdateSubCategoryResDTO updateSubCategoryResDTO = new UpdateSubCategoryResDTO();
                 SubcategoryMst subcategoryMst = new SubcategoryMst();
 
-                var categoryId = _db.CategoryMsts.FirstOrDefault(x => x.CategoryId == updateSubCategoryReqDTO.CategoryId);
+                var categoryId = _db.CategoryMsts.FirstOrDefault(x => x.CategoryId == updateSubCategoryReqDTO.CategoryId && x.IsDelete == false);
                 subcategoryMst = _db.SubcategoryMsts.FirstOrDefault(x => x.SubcategoryId == updateSubCategoryReqDTO.SubcategoryId);
 
                 if (subcategoryMst != null && categoryId != null)
                 {
                     subcategoryMst.CategoryId = categoryId.CategoryId;
                     subcategoryMst.Subcategoryname = updateSubCategoryReqDTO.Subcategoryname.Trim();
+                    subcategoryMst.UpdateBy = true;
+                    subcategoryMst.UpdatedOn = DateTime.Now;
 
                     if (subcategoryMst.Subcategoryname.Length > 0)
                     {
@@ -159,7 +169,7 @@ namespace BusinessLayer
                 }
                 else
                 {
-                    response.Message = "subcategory is not found.";
+                    response.Message = "category is not valid.";
                     response.StatusCode = System.Net.HttpStatusCode.NotFound;
                 }
             }
@@ -179,9 +189,11 @@ namespace BusinessLayer
 
                 if (subcategoryMst != null)
                 {
-                    subcategoryMst.CategoryId = subcategoryMst.CategoryId;
-                    subcategoryMst.Subcategoryname = deleteSubCategoryReqDTO.Subcategoryname;
-                    _db.SubcategoryMsts.Remove(subcategoryMst);
+                    subcategoryMst.SubcategoryId = deleteSubCategoryReqDTO.SubcategoryId;
+                    // subcategoryMst.Subcategoryname = deleteSubCategoryReqDTO.Subcategoryname;
+                    subcategoryMst.IsActive = false;
+                    subcategoryMst.IsDelete = true;
+                   // _db.SubcategoryMsts.Remove(subcategoryMst);
                     _db.SaveChanges();
 
                     deleteSubCategoryResDTO.SubcategoryId = subcategoryMst.SubcategoryId;
@@ -196,14 +208,12 @@ namespace BusinessLayer
                 }
                 else
                 {
-                    response.Message = "subcategory is not deleted.";
+                    response.Message = "subcategory is not found.";
                     response.StatusCode = System.Net.HttpStatusCode.NotFound;
                 }
             }
             catch { throw; }
             return response;
         }
-
-
     }
 }
