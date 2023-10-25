@@ -12,5 +12,9 @@ namespace ServiceLayer.Interface
     {
       public  CommonResponse GetSubCategory();
         public CommonResponse AddSubCategory(AddSubCategoryReqDTO addSubCategoryReqDTO);
+
+        public CommonResponse UpdateSubCategory(UpdateSubCategoryReqDTO updateSubCategoryReqDTO);
+
+        public CommonResponse DeleteSubCategory(DeleteSubCategoryReqDTO deleteSubCategoryReqDTO);
     }
 }

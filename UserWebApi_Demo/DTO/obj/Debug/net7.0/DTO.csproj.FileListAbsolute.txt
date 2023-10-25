@@ -10,3 +10,15 @@ D:\project\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.dll
 D:\project\UserWebApi_Demo\DTO\obj\Debug\net7.0\refint\DTO.dll
 D:\project\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.pdb
 D:\project\UserWebApi_Demo\DTO\obj\Debug\net7.0\ref\DTO.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\bin\Debug\net7.0\DTO.deps.json
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\bin\Debug\net7.0\DTO.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\bin\Debug\net7.0\DTO.pdb
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\refint\DTO.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\DTO.pdb
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\DTO\obj\Debug\net7.0\ref\DTO.dll

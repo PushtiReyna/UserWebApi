@@ -8,5 +8,7 @@ namespace DTO.SubCateogory
 {
     public class AddSubCategoryResDTO
     {
+        public int SubcategoryId { get; set; }
+
     }
 }

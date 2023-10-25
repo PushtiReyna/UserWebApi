@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hgdZiOerxx8PrlCzRYD4CoMKHf3AW51JeB13kTXtaR9ensxpyrrLBICYbVhl26KaZb0OsX8hMFBlO6xikL7qWA==",
+  "dgSpecHash": "CEs9FrKPYkevhUOxfgRVXk6XxRycR/u4EhAtivCSszn9lM4zefnnQLDFzoIBBketoHPSTvaSHsLE66RtSOW/pg==",
   "success": true,
-  "projectFilePath": "D:\\project\\UserWebApi_Demo\\Helper\\Helper.csproj",
+  "projectFilePath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\Helper\\Helper.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

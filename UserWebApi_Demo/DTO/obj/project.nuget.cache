@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "42AWuVj78PXZsfPr23qzDRDoX9+YFL0oxsLF0GGynEZTpxphpLtnzyWDxbI8tQ3FrkEXK4JsLgtaOv4ZtBDIrQ==",
+  "dgSpecHash": "Rr01Qdkvem6ZhK7SxBTh+YOSgZQw0G0EqZMIBisD5iHKstxjoqG2b9FDd+bAEbkgg11Y7E5OBzyGmkwVVJudcA==",
   "success": true,
-  "projectFilePath": "D:\\project\\UserWebApi_Demo\\DTO\\DTO.csproj",
+  "projectFilePath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\DTO\\DTO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

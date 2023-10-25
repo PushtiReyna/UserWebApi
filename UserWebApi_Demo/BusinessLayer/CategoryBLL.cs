@@ -60,25 +60,40 @@ namespace BusinessLayer
                 AddCategoryResDTO addCategoryResDTO = new AddCategoryResDTO();
 
                 CategoryMst categoryMst = new CategoryMst();
-                categoryMst.Categoryname = addCategoryReqDTO.Categoryname;
-                _db.CategoryMsts.Add(categoryMst);
-                _db.SaveChanges();
-
-                addCategoryResDTO.CategoryId = categoryMst.CategoryId;
-
-                if (addCategoryResDTO != null)
+                categoryMst.Categoryname = addCategoryReqDTO.Categoryname.Trim();
+                if (categoryMst.Categoryname.Length > 0)
                 {
-                    response.Data = addCategoryResDTO;
-                    response.Status = true;
-                    response.Message = "Category is add";
-                    response.StatusCode = System.Net.HttpStatusCode.OK;
+                    if (_db.CategoryMsts.Where(u => u.Categoryname.Trim() == categoryMst.Categoryname && u.CategoryId != categoryMst.CategoryId).Any())
+                    {
+                        response.Message = "category name already exist";
+                        response.StatusCode = System.Net.HttpStatusCode.NotFound;
+                    }
+                    else
+                    {
+                        _db.CategoryMsts.Add(categoryMst);
+                        _db.SaveChanges();
+
+                        addCategoryResDTO.CategoryId = categoryMst.CategoryId;
+
+                        if (addCategoryResDTO != null)
+                        {
+                            response.Data = addCategoryResDTO;
+                            response.Status = true;
+                            response.Message = "Category is add";
+                            response.StatusCode = System.Net.HttpStatusCode.OK;
+                        }
+                        else
+                        {
+                            response.Message = "Category is not add.";
+                            response.StatusCode = System.Net.HttpStatusCode.NotFound;
+                        }
+                    }
                 }
                 else
                 {
-                    response.Message = "Category is not add.";
+                    response.Message = "category name can not be null.";
                     response.StatusCode = System.Net.HttpStatusCode.NotFound;
                 }
-
             }
             catch { throw; }
 
@@ -95,18 +110,34 @@ namespace BusinessLayer
                 categoryMst = _db.CategoryMsts.FirstOrDefault(x => x.CategoryId == updateCategoryReqDTO.CategoryId);
                 if (categoryMst != null)
                 {
-                    categoryMst.Categoryname = updateCategoryReqDTO.Categoryname;
-                    _db.Entry(categoryMst).State = EntityState.Modified;
-                    _db.SaveChanges();
+                    categoryMst.Categoryname = updateCategoryReqDTO.Categoryname.Trim();
 
-                    updateCategoryResDTO.CategoryId = categoryMst.CategoryId;
-
-                    if (updateCategoryResDTO != null)
+                    if (categoryMst.Categoryname.Length > 0)
                     {
-                        response.Data = updateCategoryResDTO;
-                        response.Status = true;
-                        response.Message = "Category is updated";
-                        response.StatusCode = System.Net.HttpStatusCode.OK;
+                        if (_db.CategoryMsts.Where(u => u.Categoryname.Trim() == categoryMst.Categoryname && u.CategoryId != categoryMst.CategoryId).Any())
+                        {
+                            response.Message = "category name already exist";
+                            response.StatusCode = System.Net.HttpStatusCode.NotFound;
+                        }
+                        else
+                        {
+                            _db.Entry(categoryMst).State = EntityState.Modified;
+                            _db.SaveChanges();
+                            updateCategoryResDTO.CategoryId = categoryMst.CategoryId;
+
+                            if (updateCategoryResDTO != null)
+                            {
+                                response.Data = updateCategoryResDTO;
+                                response.Status = true;
+                                response.Message = "Category is updated";
+                                response.StatusCode = System.Net.HttpStatusCode.OK;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        response.Message = "category name can not be null.";
+                        response.StatusCode = System.Net.HttpStatusCode.NotFound;
                     }
                 }
                 else
@@ -117,9 +148,8 @@ namespace BusinessLayer
             }
             catch { throw; }
             return response;
-
         }
-    
+
         public CommonResponse DeleteCategory(DeleteCategoryReqDTO deleteCategoryReqDTO)
         {
             CommonResponse response = new CommonResponse();

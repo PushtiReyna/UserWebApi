@@ -10,3 +10,15 @@ D:\project\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.dll
 D:\project\UserWebApi_Demo\Helper\obj\Debug\net7.0\refint\Helper.dll
 D:\project\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.pdb
 D:\project\UserWebApi_Demo\Helper\obj\Debug\net7.0\ref\Helper.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\bin\Debug\net7.0\Helper.deps.json
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\bin\Debug\net7.0\Helper.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\bin\Debug\net7.0\Helper.pdb
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.csproj.AssemblyReference.cache
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.AssemblyInfoInputs.cache
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.AssemblyInfo.cs
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.csproj.CoreCompileInputs.cache
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\refint\Helper.dll
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\Helper.pdb
+D:\project\UserWebApi\UserWebApi\UserWebApi_Demo\Helper\obj\Debug\net7.0\ref\Helper.dll

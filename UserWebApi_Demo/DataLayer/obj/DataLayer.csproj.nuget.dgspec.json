@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj": {}
+    "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "D:\\project\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj": {
+    "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "D:\\project\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj",
+        "projectPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\Reyna\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\UserWebApi_Demo\\DataLayer\\obj\\",
+        "outputPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Reyna\\AppData\\Roaming\\NuGet\\NuGet.Config",

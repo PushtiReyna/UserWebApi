@@ -3929,11 +3929,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project\\UserWebApi_Demo\\UserWebApi\\UserWebApi.csproj",
+      "projectUniqueName": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\UserWebApi\\UserWebApi.csproj",
       "projectName": "UserWebApi",
-      "projectPath": "D:\\project\\UserWebApi_Demo\\UserWebApi\\UserWebApi.csproj",
+      "projectPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\UserWebApi\\UserWebApi.csproj",
       "packagesPath": "C:\\Users\\Reyna\\.nuget\\packages\\",
-      "outputPath": "D:\\project\\UserWebApi_Demo\\UserWebApi\\obj\\",
+      "outputPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\UserWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Reyna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3951,11 +3951,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\project\\UserWebApi_Demo\\Helper\\Helper.csproj": {
-              "projectPath": "D:\\project\\UserWebApi_Demo\\Helper\\Helper.csproj"
+            "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\Helper\\Helper.csproj": {
+              "projectPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\Helper\\Helper.csproj"
             },
-            "D:\\project\\UserWebApi_Demo\\ServiceLayer\\ServiceLayer.csproj": {
-              "projectPath": "D:\\project\\UserWebApi_Demo\\ServiceLayer\\ServiceLayer.csproj"
+            "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\ServiceLayer\\ServiceLayer.csproj": {
+              "projectPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\ServiceLayer\\ServiceLayer.csproj"
             }
           }
         }

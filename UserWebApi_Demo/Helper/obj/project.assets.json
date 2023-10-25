@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project\\UserWebApi_Demo\\Helper\\Helper.csproj",
+      "projectUniqueName": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\Helper\\Helper.csproj",
       "projectName": "Helper",
-      "projectPath": "D:\\project\\UserWebApi_Demo\\Helper\\Helper.csproj",
+      "projectPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\Helper\\Helper.csproj",
       "packagesPath": "C:\\Users\\Reyna\\.nuget\\packages\\",
-      "outputPath": "D:\\project\\UserWebApi_Demo\\Helper\\obj\\",
+      "outputPath": "D:\\project\\UserWebApi\\UserWebApi\\UserWebApi_Demo\\Helper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Reyna\\AppData\\Roaming\\NuGet\\NuGet.Config",

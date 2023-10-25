@@ -2,5 +2,7 @@
 {
     public class AddSubCategoryResViewModel
     {
+        public int SubcategoryId { get; set; }
+
     }
 }

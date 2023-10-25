@@ -26,5 +26,13 @@ namespace ServiceLayer.Implementation
         {
             return _subCategoryBLL.AddSubCategory(addSubCategoryReqDTO);
         }
+        public CommonResponse UpdateSubCategory(UpdateSubCategoryReqDTO updateSubCategoryReqDTO)
+        {
+            return _subCategoryBLL.UpdateSubCategory(updateSubCategoryReqDTO);
+        }
+        public CommonResponse DeleteSubCategory(DeleteSubCategoryReqDTO deleteSubCategoryReqDTO)
+        {
+            return _subCategoryBLL.DeleteSubCategory(deleteSubCategoryReqDTO);
+        }
     }
 }

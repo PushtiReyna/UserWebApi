@@ -2,5 +2,7 @@
 {
     public class DeleteSubCategoryResViewModel
     {
+        public int SubcategoryId { get; set; }
+
     }
 }

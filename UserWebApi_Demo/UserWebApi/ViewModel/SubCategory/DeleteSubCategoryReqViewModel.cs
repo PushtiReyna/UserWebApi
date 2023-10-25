@@ -2,5 +2,7 @@
 {
     public class DeleteSubCategoryReqViewModel
     {
+        public int SubcategoryId { get; set; }
+ 
     }
 }
